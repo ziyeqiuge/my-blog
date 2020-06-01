@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: shana
+theme: jekyll-theme-time-machine
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
