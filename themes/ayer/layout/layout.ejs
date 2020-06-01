@@ -1,0 +1,33 @@
+<%- partial('_partial/head') %>
+
+<body>
+  <% if (theme.clickBoom){ %>
+  <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 999; pointer-events: none;"></canvas>
+  <% } %>
+  <div id="app">
+    <main class="content on">
+      <%- body %>
+      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+      <div class="float_btns">
+        <%- partial('_partial/totop') %>
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <%- partial('_partial/sidebar') %>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <%- partial('_partial/modal') %>
+    <%- partial('_partial/after-footer') %>
+
+    <% if (theme.music&&theme.music.enable){ %>
+    <%- partial('_partial/music') %>
+    <% } %>
+  </div>
+</body>
+
+</html>
