@@ -86,6 +86,6 @@ uyan:
 # leadcloud访问次数统计
 # 
 leancloud_visitors:
-  enable: false
+  enable: true
   app_id: 
   app_key: 
